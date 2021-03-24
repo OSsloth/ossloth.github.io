@@ -1,0 +1,107 @@
+* {
+	font-family: "Palatino Linotype", Serif;
+	text-align:center;
+}
+body {
+	background-image: url(images/triangle-mosaic/triangle-mosaic.png) ; /* This pattern is downloaded from www.subtlepatterns.com */
+}
+.header {
+	color: black;
+    font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	padding: 0px;
+	text-shadow: 1px 2px grey; 
+}
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  border-style:ridge;
+}
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-style:ridge;
+}
+.nav a:hover {
+	background-color:#ddd;
+	color: black;
+}
+.footer {
+	background-color: #ddd;
+	position:absolute;
+	margin-top:40px;
+	top:600px;
+}
+.game {
+    position:relative;
+    width:500px;
+    height:200px;
+    border:1px solid black;
+    margin:auto;
+    background-image:url(images/newbg.jpg);
+    background-size:cover; 
+    background-position: center; 
+    animation:scroll 2s infinite linear; 
+    
+}
+@keyframes scroll {
+    0% {background-position:  0px}
+    100% {background-position:  -500px}
+}
+#character {
+    width: 30px;
+    height:50px;
+    background-color:black;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    top:140px;
+    opacity: 1;
+	border-radius: 5px;
+}
+.animate {
+    animation: jump 0.3s linear;
+}
+@keyframes jump {
+    0%{top: 145px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+#block {
+    background-color:red;
+    background-position:center;
+    background-size:cover;
+    width: 20px;
+    height:20px;
+    position:relative;
+    top:120px;
+    left:480px;
+    animation: block 2s infinite linear;
+	border-radius: 10px;
+}
+@keyframes block {
+    0%{left: 480px;}
+    100%{left: 0px;}
+}  
+p {
+    text-align: center;
+}
+.score {
+    text-align: center;
+    position:absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gamerules {
+    text-align: center;
+}
+.gamestart {
+    text-align: center;
+}
