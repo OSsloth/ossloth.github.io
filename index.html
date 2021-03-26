@@ -1,0 +1,41 @@
+<!-- Created by Mikołaj Kosiński. 03.2021 -->
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta name='autor' content='Mikołaj Kosiński' charset='UTF-8'>
+		<title>My portfolio</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="shortcut icon" href="images/new_icon.png" type="image/x-icon">
+	</head>
+	<body onload='time()' class='noselect'> 
+		<div class='grid-container'>
+			<div class='grid-item grid-header'>Mikołaj Kosiński</div>
+			<div class='grid-item grid-timer' id='span'></div>
+			<div class='grid-item grid-links grid-link-1' onclick='underConstruction()'>O mnie</div>
+			<div class='grid-item grid-links grid-link-2' onclick='underConstruction()'>Kontakt</div>
+			<div class='grid-item grid-links grid-link-3' onclick='underConstruction()'>CV</div>
+			<div class='grid-item grid-links grid-link-4' onclick='location.href="projects.html";'>Projekty</div>
+			<div class='grid-item grid-text-1'><p>Witaj w moim portfolio!</p>
+				Na tej stronie zamieszczam projekty nad którymi pracuję.
+				Więcej informacji na mój temat znaleźć można w zakładce "O mnie". 
+				Aby przejrzeć gotowe projekty przejdź do zakładki "Projekty."
+			</div>
+			<div class='grid-item grid-text-2'>Made by Mikołaj Kosiński. 
+				Porftolio początkującego programisty webowego.</div>
+		</div>
+		<script>
+			function underConstruction() {
+				alert('Tutaj jeszcze nic nie ma :(');
+			}
+			var span = document.getElementById('span');
+			function time(){
+    			var d = new Date();
+    			var s = d.getSeconds();
+    			var m = d.getMinutes();
+    			var h = d.getHours();
+    			span.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+			} setInterval(time,1000);
+		</script>
+	</body>
+</html>
+

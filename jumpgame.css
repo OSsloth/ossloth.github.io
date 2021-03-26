@@ -1,0 +1,129 @@
+/* Credit: https://blog.logrocket.com/build-a-game-with-html-css-javascript/ */
+/* Created by Mikołaj Kosiński. 03.2021 */
+* {
+    text-align:center;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+}
+.game {
+    position:relative;
+    width:500px;
+    height:200px;
+    box-shadow:  2px 2px 15px 5px #00c6cf;
+    border:1px solid #2d2d2d;
+    margin:auto;
+    background-image:url(images/newbg.jpg);
+    background-size:cover; 
+    background-position: center; 
+    animation:scroll 2s infinite linear; 
+    border-radius: 2%;
+}
+@keyframes scroll {
+    0% {background-position:  0px}
+    100% {background-position:  -500px}
+}
+#character {
+    width: 30px;
+    height:50px;
+    background-color:#2d2d2d;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    top:140px;
+    left:2px;
+    opacity: 1;
+	border-radius: 5px;
+}
+.animate {
+    animation: jump 0.3s linear;
+}
+@keyframes jump {
+    0%{top: 145px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+#block {
+    background-color:#ab2b63;
+    background-position:center;
+    background-size:cover;
+    width: 20px;
+    height:20px;
+    position:relative;
+    top:120px;
+    left:479px;
+    animation: block 2s infinite linear;
+	border-radius: 10px;
+}
+@keyframes block {
+    0%{left: 480px;}
+    100%{left: 0px;}
+}  
+.score {
+    text-align: center;
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    text-shadow: 2px 2px 4px #000000;
+}
+#scoreSpan {
+    color:black;
+}
+body {
+    background-color:#333;
+}
+.grid-container {
+    display:grid;
+    grid-template-columns: 150px 400px 150px;
+    color: white;
+    grid-gap: 30px;
+    justify-content: center;
+    align-content: center;  
+    font-size: 18px;
+    grid-template-areas: 
+    "link2 header timer"
+    ". text ."
+    ". . ."
+    ". . ."
+}
+.grid-container :hover {
+    background-color:#00c6cf;
+    box-shadow: #00c6cf 1px 1px 1px 1px;
+    cursor: pointer;
+    color:white;
+}
+.noselect {
+    user-select: none;
+}
+.grid-item {
+    background-color:#2d2d2d;
+    box-shadow: #2d2d2d 2px 2px 2px 2px;
+    padding:20px;
+    display:grid;
+    align-items: center;
+    justify-items:center;
+    border-radius: 5%;
+}
+.grid-header {
+    grid-area:header;
+    font-weight: bold;
+    pointer-events: none;
+} 
+.grid-timer {
+    grid-area:timer;
+    pointer-events: none;
+}
+.grid-link-2 {
+    grid-area:link2;
+}
+.grid-links {
+    color:#00c6cf;
+    transition:all .3s ease-in-out;
+}
+.grid-text-1 {
+    grid-area:text;
+    pointer-events: none;
+}

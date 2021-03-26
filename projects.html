@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang='en'>
+	<head>
+		<meta name='autor' content='MK' charset='UTF-8'>
+		<title>Projekty</title>
+		<link rel="stylesheet" href="projects.css">
+		<link rel="shortcut icon" href="images/new_icon.png" type="image/x-icon">
+	</head>
+	<body onload='time()' class='noselect'> 
+		<div class='grid-container'>
+			<div class='grid-item grid-timer' id='span'></div>
+			<div class='grid-item grid-links grid-link-1' onclick='location.href="index.html";'>Powrót</div>
+			<div class='grid-item grid-text-1'>Wybierz jeden z projektów!</div>
+            <div class='grid-item grid-links grid-projekt1' onclick='location.href="guessinggame.html";'>Guessing game</div>
+            <div class='grid-item grid-links grid-projekt2' onclick='location.href="jumpgame.html";'>Jump game</div>
+            <div class='grid-item grid-links grid-projekt3' onclick='location.href="breakoutgame.html";'>Breakout game</div>
+			<div class='grid-item grid-text-2'>Made by Mikołaj Kosiński. 
+				Porftolio początkującego programisty webowego.</div>
+		</div>
+		<script>
+			var span = document.getElementById('span');
+			function time(){
+    			var d = new Date();
+    			var s = d.getSeconds();
+    			var m = d.getMinutes();
+    			var h = d.getHours();
+    			span.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+			} setInterval(time,1000);
+		</script>
+	</body>
+</html>
+
